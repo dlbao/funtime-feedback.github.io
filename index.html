@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Customer Feedback</title>
+  <title>Funtime Sushi & Ramen – Feedback</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #faf7f2;
+      background: #111;
       color: #222;
       text-align: center;
       padding: 30px 18px;
@@ -18,45 +18,55 @@
     .card {
       max-width: 480px;
       margin: 0 auto;
-      background: white;
+      background: #fffaf3;
       padding: 32px 22px;
       border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+      border-top: 8px solid #c62828;
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 10px;
+      color: #b71c1c;
+      letter-spacing: 0.5px;
     }
 
     p {
       font-size: 17px;
       line-height: 1.5;
-      margin-bottom: 26px;
+      margin-bottom: 18px;
+    }
+
+    .promo {
+      font-weight: bold;
+      color: #b71c1c;
+      font-size: 18px;
+      margin-bottom: 22px;
     }
 
     .stars {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
-    
+
     .stars button {
       display: block;
       width: 100%;
-      font-size: 30px;
-      background: #fff;
+      font-size: 28px;
+      background: #ffffff;
       cursor: pointer;
       padding: 14px;
       border-radius: 12px;
-      border: 1px solid #ddd;
+      border: 1px solid #e0c7a5;
       transition: 0.2s;
     }
 
     .stars button:hover {
-      background: #f7f7f7;
-      transform: scale(1.12);
+      background: #fff3e0;
+      transform: scale(1.04);
     }
 
     .note {
@@ -64,25 +74,34 @@
       color: #666;
       margin-top: 24px;
     }
-
-    
   </style>
 </head>
 
 <body>
   <div class="card">
-    <h1>How was your experience?</h1>
-    <p>Your feedback helps us improve and serve you better.</p>
+    <h1>Funtime Sushi & Ramen</h1>
+
+    <p>How was your experience today?</p>
+
+    <p class="promo">
+      🎁 Share your feedback and enjoy a FREE milk tea next visit!
+    </p>
 
     <div class="stars">
-      <button onclick="goToFeedback(1)">⭐</button>
-      <button onclick="goToFeedback(2)">⭐⭐</button>
-      <button onclick="goToFeedback(3)">⭐⭐⭐</button>
-      <button onclick="goToReview(4)">⭐⭐⭐⭐</button>
-      <button onclick="goToReview(5)">⭐⭐⭐⭐⭐</button>
+      <button onclick="goToFeedback(1)">⭐ Poor</button>
+      <button onclick="goToFeedback(2)">⭐⭐ Fair</button>
+      <button onclick="goToFeedback(3)">⭐⭐⭐ Okay</button>
+      <button onclick="goToReview(4)">⭐⭐⭐⭐ Good</button>
+      <button onclick="goToReview(5)">⭐⭐⭐⭐⭐ Excellent</button>
     </div>
 
-    <p class="note">Thank you for supporting our local restaurant.</p>
+    <p class="note">
+      Show your review to our staff to redeem your free milk tea.
+    </p>
+
+    <p class="note">
+      Thank you for supporting Funtime Sushi & Ramen.
+    </p>
   </div>
 
   <script>
