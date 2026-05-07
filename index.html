@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Feedback</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #faf7f2;
+      color: #222;
+      text-align: center;
+      padding: 30px 18px;
+    }
+
+    .card {
+      max-width: 480px;
+      margin: 0 auto;
+      background: white;
+      padding: 32px 22px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.5;
+      margin-bottom: 26px;
+    }
+
+    .stars button {
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px 4px;
+    }
+
+    .stars button:hover {
+      transform: scale(1.12);
+    }
+
+    .note {
+      font-size: 14px;
+      color: #666;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>How was your experience?</h1>
+    <p>Your feedback helps us improve and serve you better.</p>
+
+    <div class="stars">
+      <button onclick="goToFeedback(1)">⭐</button>
+      <button onclick="goToFeedback(2)">⭐⭐</button>
+      <button onclick="goToFeedback(3)">⭐⭐⭐</button>
+      <button onclick="goToReview(4)">⭐⭐⭐⭐</button>
+      <button onclick="goToReview(5)">⭐⭐⭐⭐⭐</button>
+    </div>
+
+    <p class="note">Thank you for supporting our local restaurant.</p>
+  </div>
+
+  <script>
+    const googleReviewLink = "https://search.google.com/local/writereview?placeid=ChIJ_1vQo1RlZIgRNfXFoRKrQTM";
+    const internalFeedbackLink = "https://forms.gle/ZwnVJNb7HdFp5ckH7";
+
+    function goToReview(rating) {
+      window.location.href = googleReviewLink;
+    }
+
+    function goToFeedback(rating) {
+      window.location.href = internalFeedbackLink;
+    }
+  </script>
+</body>
+</html>
